@@ -74,6 +74,9 @@ El dataset utilizado para entrenar el modelo está disponible en Kaggle:
 
 2. Abrir el navegador en `http://localhost:5000`
 
+![image](https://github.com/user-attachments/assets/4442f1d1-1911-4316-939c-f3fb1b998011)
+
+
 ## 🌿 Clases de Enfermedades
 
 El sistema puede detectar las siguientes condiciones en plantas:
@@ -88,6 +91,9 @@ El sistema puede detectar las siguientes condiciones en plantas:
 - Powdery (Oídio)
 - Rust (Roya)
 - Streak Virus (Virus del Rayado)
+
+![image](https://github.com/user-attachments/assets/059dde92-fe95-4f2f-aa0e-70c73ca4cacb)
+
 
 ## 📝 Licencia
 
