@@ -69,7 +69,9 @@ El dataset utilizado para entrenar el modelo está disponible en Kaggle:
 
 1. Ejecutar la aplicación web:
    ```bash
-   python run.py
+   python run.py --all #Entrenar el modelo y luego iniciar la aplicación web
+   python run.py --web #Iniciar la aplicación web
+   python run.py --train #Entrenar el modelo
    ```
 
 2. Abrir el navegador en `http://localhost:5000`
