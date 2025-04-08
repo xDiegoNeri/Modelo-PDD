@@ -1,6 +1,6 @@
 # Sistema de Detección de Enfermedades en Plantas 🌱
 
-Este proyecto implementa un sistema de detección de enfermedades en plantas utilizando técnicas de aprendizaje profundo y una interfaz web moderna en español.
+Este proyecto implementa un sistema de detección de enfermedades en plantas utilizando técnicas de aprendizaje profundo.
 
 ## 📋 Descripción
 
@@ -75,7 +75,7 @@ El dataset utilizado para entrenar el modelo está disponible en Kaggle:
 2. Abrir el navegador en `http://localhost:5000`
 
 ![image](https://github.com/user-attachments/assets/4442f1d1-1911-4316-939c-f3fb1b998011)
-
+![image](https://github.com/user-attachments/assets/059dde92-fe95-4f2f-aa0e-70c73ca4cacb)
 
 ## 🌿 Clases de Enfermedades
 
@@ -92,7 +92,8 @@ El sistema puede detectar las siguientes condiciones en plantas:
 - Rust (Roya)
 - Streak Virus (Virus del Rayado)
 
-![image](https://github.com/user-attachments/assets/059dde92-fe95-4f2f-aa0e-70c73ca4cacb)
+![image](https://github.com/user-attachments/assets/c13a4c2d-79bb-42de-9246-538e7f1257b0)
+
 
 
 ## 📝 Licencia
