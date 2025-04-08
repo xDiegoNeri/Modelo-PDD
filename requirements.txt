@@ -1,0 +1,19 @@
+# Deep Learning Libraries
+tensorflow==2.15.0  # More stable version for Windows
+# keras==3.9.2  # Commented out as TensorFlow includes Keras
+
+# Web Framework
+flask==3.1.0
+flask-cors==5.0.1
+
+# Data Processing
+numpy==1.26.0  # Compatible with TensorFlow 2.15
+pandas==2.2.3
+scikit-learn==1.6.1
+matplotlib==3.10.1
+
+# Image Processing
+pillow==11.1.0
+
+# Utilities
+tqdm==4.67.1

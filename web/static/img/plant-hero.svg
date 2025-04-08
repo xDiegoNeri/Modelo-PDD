@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Fondo con gradiente suave -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8f5e9" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#c8e6c9" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo redondeado -->
+  <rect width="100%" height="100%" rx="30" ry="30" fill="url(#bg-gradient)" />
+  
+  <!-- Tallo principal -->
+  <path d="M256 450 L256 200" stroke="#388E3C" stroke-width="12" stroke-linecap="round" />
+  
+  <!-- Hojas -->
+  <path d="M256 350 Q200 300 150 350 Q200 400 256 350" fill="#4CAF50" stroke="#388E3C" stroke-width="2" />
+  <path d="M256 350 Q312 300 362 350 Q312 400 256 350" fill="#4CAF50" stroke="#388E3C" stroke-width="2" />
+  
+  <path d="M256 300 Q180 230 130 300 Q180 370 256 300" fill="#66BB6A" stroke="#388E3C" stroke-width="2" />
+  <path d="M256 300 Q332 230 382 300 Q332 370 256 300" fill="#66BB6A" stroke="#388E3C" stroke-width="2" />
+  
+  <path d="M256 250 Q160 160 110 250 Q160 340 256 250" fill="#81C784" stroke="#388E3C" stroke-width="2" />
+  <path d="M256 250 Q352 160 402 250 Q352 340 256 250" fill="#81C784" stroke="#388E3C" stroke-width="2" />
+  
+  <!-- Maceta -->
+  <path d="M206 450 L306 450 L326 500 L186 500 Z" fill="#795548" />
+  <path d="M206 450 L306 450 L296 470 L216 470 Z" fill="#5D4037" />
+  
+  <!-- Detalles de la planta -->
+  <circle cx="200" cy="280" r="5" fill="#388E3C" />
+  <circle cx="312" cy="320" r="5" fill="#388E3C" />
+  <circle cx="180" cy="350" r="4" fill="#388E3C" />
+  <circle cx="332" cy="260" r="4" fill="#388E3C" />
+  
+  <!-- Gotas de agua (efecto glassmórfico) -->
+  <circle cx="220" cy="220" r="8" fill="rgba(255, 255, 255, 0.5)" />
+  <circle cx="290" cy="280" r="6" fill="rgba(255, 255, 255, 0.5)" />
+  <circle cx="170" cy="290" r="5" fill="rgba(255, 255, 255, 0.5)" />
+  <circle cx="340" cy="230" r="7" fill="rgba(255, 255, 255, 0.5)" />
+</svg>

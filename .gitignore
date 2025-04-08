@@ -1,0 +1,42 @@
+# Ignorar carpeta de datos
+Plant Disease Data/
+
+# Ignorar entorno virtual
+.venv/
+venv/
+env/
+
+# Ignorar archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignorar archivos de distribución
+dist/
+build/
+*.egg-info/
+
+# Ignorar archivos de configuración local
+.env
+.env.local
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignorar archivos de registro
+*.log
+
+# Ignorar archivos de base de datos
+*.sqlite3
+*.db
+
+# Ignorar archivos de modelo guardados (opcional, comentar si se desean incluir)
+# *.h5
+# *.pkl

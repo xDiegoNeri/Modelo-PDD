@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Detección de Enfermedades en Plantas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>PlantScan</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index') }}" class="active">Inicio</a></li>
+                <li><a href="{{ url_for('analizar') }}">Analizar</a></li>
+                <li><a href="{{ url_for('info') }}">Información</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Detecta enfermedades en tus plantas</h1>
+                <p>Utiliza inteligencia artificial para identificar problemas en tus cultivos de forma rápida y precisa. Nuestro sistema analiza imágenes de plantas y detecta enfermedades comunes para ayudarte a tomar medidas preventivas a tiempo.</p>
+                <a href="{{ url_for('analizar') }}" class="btn-primary">Analizar imagen</a>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='img/plant-hero.svg') }}" alt="Planta saludable">
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Características principales</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>IA Avanzada</h3>
+                    <p>Utilizamos modelos de aprendizaje profundo entrenados con miles de imágenes para lograr alta precisión en la detección.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Resultados Instantáneos</h3>
+                    <p>Obtén diagnósticos en segundos, permitiéndote actuar rápidamente ante posibles problemas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-medical"></i>
+                    </div>
+                    <h3>Información Detallada</h3>
+                    <p>Accede a descripciones completas de enfermedades, síntomas y recomendaciones de tratamiento.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>¿Cómo funciona?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Toma una foto</h3>
+                    <p>Captura una imagen clara de la hoja o parte de la planta que muestre los síntomas.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Sube la imagen</h3>
+                    <p>Carga la foto en nuestra plataforma con un simple clic o arrastre.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Obtén resultados</h3>
+                    <p>Recibe un diagnóstico preciso y recomendaciones para tratar el problema.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-container">
+                <h2>¿Listo para analizar tus plantas?</h2>
+                <p>Comienza a utilizar nuestra herramienta de detección de enfermedades y protege tus cultivos.</p>
+                <a href="{{ url_for('analizar') }}" class="btn-primary">Comenzar ahora</a>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>PlantScan</span>
+                </div>
+                <p>Sistema de Detección de Enfermedades en Plantas</p>
+                <p>&copy; 2023 PlantScan. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

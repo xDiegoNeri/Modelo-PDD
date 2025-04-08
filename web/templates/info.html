@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información - Sistema de Detección de Enfermedades en Plantas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>PlantScan</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                <li><a href="{{ url_for('analizar') }}">Analizar</a></li>
+                <li><a href="{{ url_for('info') }}" class="active">Información</a></li>
+            </ul>
+        </nav>
+
+        <section class="info-header">
+            <h1>Información sobre Enfermedades en Plantas</h1>
+            <p>Conoce más sobre las enfermedades que nuestro sistema puede detectar, sus síntomas y tratamientos recomendados.</p>
+        </section>
+
+        <section class="disease-info-section">
+            <div class="disease-filter">
+                <h3>Filtrar por:</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="fungal">Fúngicas</button>
+                    <button class="filter-btn" data-filter="viral">Virales</button>
+                    <button class="filter-btn" data-filter="pest">Plagas</button>
+                </div>
+            </div>
+
+            <div class="disease-cards">
+                <!-- Tizón -->
+                <div class="disease-info-card" data-category="fungal">
+                    <div class="disease-header">
+                        <h2>Tizón (Blight)</h2>
+                        <span class="disease-tag fungal">Fúngica</span>
+                    </div>
+                    <div class="disease-content">
+                        <div class="disease-description">
+                            <h3>Descripción</h3>
+                            <p>El tizón es una enfermedad fúngica común que afecta a diversas plantas, causando la muerte rápida del tejido vegetal. Existen varios tipos, como el tizón temprano y el tizón tardío, que afectan principalmente a cultivos como tomates, papas y otras solanáceas.</p>
+                        </div>
+                        <div class="disease-symptoms">
+                            <h3>Síntomas</h3>
+                            <ul>
+                                <li>Manchas oscuras en las hojas, a menudo con anillos concéntricos</li>
+                                <li>Áreas necróticas que se expanden rápidamente</li>
+                                <li>Marchitamiento y muerte de hojas y tallos</li>
+                                <li>En casos avanzados, afecta a frutos y tubérculos</li>
+                            </ul>
+                        </div>
+                        <div class="disease-treatment">
+                            <h3>Tratamiento</h3>
+                            <ul>
+                                <li>Aplicar fungicidas a base de cobre o productos específicos para tizón</li>
+                                <li>Eliminar y destruir las partes afectadas de la planta</li>
+                                <li>Mejorar la circulación de aire entre las plantas</li>
+                                <li>Evitar regar el follaje; regar directamente en la base</li>
+                                <li>Rotar cultivos para prevenir la acumulación del patógeno en el suelo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enrollamiento -->
+                <div class="disease-info-card" data-category="viral">
+                    <div class="disease-header">
+                        <h2>Enrollamiento (Curl)</h2>
+                        <span class="disease-tag viral">Viral</span>
+                    </div>
+                    <div class="disease-content">
+                        <div class="disease-description">
+                            <h3>Descripción</h3>
+                            <p>El enrollamiento de hojas es un síntoma que puede ser causado por virus, ácaros o factores ambientales. El virus del enrollamiento de la hoja es particularmente común en cultivos como tomate, pimiento y papas.</p>
+                        </div>
+                        <div class="disease-symptoms">
+                            <h3>Síntomas</h3>
+                            <ul>
+                                <li>Hojas que se curvan hacia arriba o hacia abajo</li>
+                                <li>Reducción del tamaño de las hojas</li>
+                                <li>Amarillamiento o enrojecimiento del follaje</li>
+                                <li>Crecimiento atrofiado de la planta</li>
+                                <li>Reducción en la producción de frutos</li>
+                            </ul>
+                        </div>
+                        <div class="disease-treatment">
+                            <h3>Tratamiento</h3>
+                            <ul>
+                                <li>Controlar insectos vectores como mosca blanca y pulgones</li>
+                                <li>Eliminar plantas infectadas para prevenir propagación</li>
+                                <li>Utilizar variedades resistentes cuando sea posible</li>
+                                <li>Mantener buenas prácticas de higiene en el jardín o cultivo</li>
+                                <li>No existe cura para plantas infectadas con virus</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ácaro Verde -->
+                <div class="disease-info-card" data-category="pest">
+                    <div class="disease-header">
+                        <h2>Ácaro Verde (Green Mite)</h2>
+                        <span class="disease-tag pest">Plaga</span>
+                    </div>
+                    <div class="disease-content">
+                        <div class="disease-description">
+                            <h3>Descripción</h3>
+                            <p>Los ácaros verdes son pequeñas arañas que se alimentan de la savia de las plantas. Son difíciles de ver a simple vista pero causan daños significativos al debilitar la planta y reducir su capacidad fotosintética.</p>
+                        </div>
+                        <div class="disease-symptoms">
+                            <h3>Síntomas</h3>
+                            <ul>
+                                <li>Manchas amarillentas o plateadas en las hojas</li>
+                                <li>Decoloración y bronceado del follaje</li>
+                                <li>Telarañas finas en el envés de las hojas</li>
+                                <li>Hojas que se secan y caen prematuramente</li>
+                                <li>Crecimiento atrofiado y debilitamiento general</li>
+                            </ul>
+                        </div>
+                        <div class="disease-treatment">
+                            <h3>Tratamiento</h3>
+                            <ul>
+                                <li>Aplicar acaricidas específicos siguiendo las instrucciones</li>
+                                <li>Utilizar aceites hortícolas o jabones insecticidas</li>
+                                <li>Introducir depredadores naturales como ácaros predadores</li>
+                                <li>Aumentar la humedad ambiental (los ácaros prefieren condiciones secas)</li>
+                                <li>Lavar las hojas con agua a presión para eliminar ácaros</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Minador de Hojas -->
+                <div class="disease-info-card" data-category="pest">
+                    <div class="disease-header">
+                        <h2>Minador de Hojas (Leaf Miner)</h2>
+                        <span class="disease-tag pest">Plaga</span>
+                    </div>
+                    <div class="disease-content">
+                        <div class="disease-description">
+                            <h3>Descripción</h3>
+                            <p>Los minadores de hojas son larvas de insectos que viven dentro del tejido de las hojas, creando túneles o galerías mientras se alimentan. Afectan a una amplia variedad de plantas ornamentales y cultivos.</p>
+                        </div>
+                        <div class="disease-symptoms">
+                            <h3>Síntomas</h3>
+                            <ul>
+                                <li>Líneas serpenteantes o túneles blanquecinos en las hojas</li>
+                                <li>Manchas irregulares transparentes o de color claro</li>
+                                <li>Daño principalmente estético, pero puede reducir la fotosíntesis</li>
+                                <li>En infestaciones severas, caída prematura de hojas</li>
+                            </ul>
+                        </div>
+                        <div class="disease-treatment">
+                            <h3>Tratamiento</h3>
+                            <ul>
+                                <li>Eliminar y destruir hojas afectadas</li>
+                                <li>Aplicar insecticidas sistémicos que penetren en el tejido foliar</li>
+                                <li>Utilizar trampas amarillas pegajosas para capturar adultos</li>
+                                <li>Introducir avispas parasitoides como control biológico</li>
+                                <li>Mantener las plantas sanas y vigorosas para resistir el daño</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mancha Foliar -->
+                <div class="disease-info-card" data-category="fungal">
+                    <div class="disease-header">
+                        <h2>Mancha Foliar (Leaf Spot)</h2>
+                        <span class="disease-tag fungal">Fúngica</span>
+                    </div>
+                    <div class="disease-content">
+                        <div class="disease-description">
+                            <h3>Descripción</h3>
+                            <p>Las manchas foliares son enfermedades causadas principalmente por hongos, aunque también pueden ser bacterianas. Se caracterizan por lesiones localizadas en las hojas que pueden variar en tamaño, forma y color según el patógeno.</p>
+                        </div>
+                        <div class="disease-symptoms">
+                            <h3>Síntomas</h3>
+                            <ul>
+                                <li>Manchas circulares o irregulares en las hojas</li>
+                                <li>Coloración marrón, negra, púrpura o rojiza</li>
+                                <li>A menudo con bordes definidos o halos amarillentos</li>
+                                <li>Las manchas pueden unirse formando áreas necróticas más grandes</li>
+                                <li>Defoliación en casos severos</li>
+                            </ul>
+                        </div>
+                        <div class="disease-treatment">
+                            <h3>Tratamiento</h3>
+                            <ul>
+                                <li>Aplicar fungicidas preventivos o curativos según el caso</li>
+                                <li>Eliminar y destruir hojas infectadas</li>
+                                <li>Evitar regar por aspersión; regar en la base de la planta</li>
+                                <li>Mejorar la circulación de aire entre plantas</li>
+                                <li>Rotar cultivos para reducir la presencia del patógeno</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mosaico -->
+                <div class="disease-info-card" data-category="viral">
+                    <div class="disease-header">
+                        <h2>Mosaico (Mosaic)</h2>
+                        <span class="disease-tag viral">Viral</span>
+                    </div>
+                    <div class="disease-content">
+                        <div class="disease-description">
+                            <h3>Descripción</h3>
+                            <p>El mosaico es una enfermedad viral que afecta a numerosas especies de plantas. El virus del mosaico del tabaco (TMV) es uno de los más comunes, pero existen muchas variantes específicas para diferentes cultivos.</p>
+                        </div>
+                        <div class="disease-symptoms">
+                            <h3>Síntomas</h3>
+                            <ul>
+                                <li>Patrón de moteado claro y oscuro en las hojas (efecto mosaico)</li>
+                                <li>Deformación y arrugamiento de hojas</li>
+                                <li>Crecimiento atrofiado o distorsionado</li>
+                                <li>Amarillamiento general de la planta</li>
+                                <li>Reducción en la producción y calidad de frutos</li>
+                            </ul>
+                        </div>
+                        <div class="disease-treatment">
+                            <h3>Tratamiento</h3>
+                            <ul>
+                                <li>No existe cura para plantas infectadas con virus</li>
+                                <li>Eliminar y destruir plantas infectadas</li>
+                                <li>Controlar insectos vectores como pulgones y trips</li>
+                                <li>Desinfectar herramientas de jardinería entre plantas</li>
+                                <li>Utilizar variedades resistentes cuando estén disponibles</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oídio -->
+                <div class="disease-info-card" data-category="fungal">
+                    <div class="disease-header">
+                        <h2>Oídio (Powdery)</h2>
+                        <span class="disease-tag fungal">Fúngica</span>
+                    </div>
+                    <div class="disease-content">
+                        <div class="disease-description">
+                            <h3>Descripción</h3>
+                            <p>El oídio o mildiu polvoriento es una enfermedad fúngica común que afecta a una amplia gama de plantas. Se desarrolla principalmente en condiciones de alta humedad pero con hojas secas, y temperaturas moderadas.</p>
+                        </div>
+                        <div class="disease-symptoms">
+                            <h3>Síntomas</h3>
+                            <ul>
+                                <li>Manchas o parches blancos polvorientos en hojas, tallos y flores</li>
+                                <li>Crecimiento de micelio blanco en la superficie de las hojas</li>
+                                <li>Hojas que se vuelven amarillas, se deforman y caen</li>
+                                <li>Crecimiento atrofiado de brotes nuevos</li>
+                                <li>Reducción en la floración y fructificación</li>
+                            </ul>
+                        </div>
+                        <div class="disease-treatment">
+                            <h3>Tratamiento</h3>
+                            <ul>
+                                <li>Aplicar fungicidas específicos para oídio</li>
+                                <li>Utilizar remedios caseros como solución de bicarbonato de sodio</li>
+                                <li>Mejorar la circulación de aire entre plantas</li>
+                                <li>Evitar exceso de fertilización nitrogenada</li>
+                                <li>Podar partes afectadas para reducir la propagación</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roya -->
+                <div class="disease-info-card" data-category="fungal">
+                    <div class="disease-header">
+                        <h2>Roya (Rust)</h2>
+                        <span class="disease-tag fungal">Fúngica</span>
+                    </div>
+                    <div class="disease-content">
+                        <div class="disease-description">
+                            <h3>Descripción</h3>
+                            <p>La roya es una enfermedad fúngica caracterizada por pústulas de color óxido o marrón rojizo. Existen muchos tipos de roya, cada uno específico para ciertas plantas o grupos de plantas relacionadas.</p>
+                        </div>
+                        <div class="disease-symptoms">
+                            <h3>Síntomas</h3>
+                            <ul>
+                                <li>Pústulas de color naranja, marrón rojizo o negro en hojas y tallos</li>
+                                <li>Polvo de esporas que se desprende al tocar las pústulas</li>
+                                <li>Amarillamiento y caída prematura de hojas</li>
+                                <li>Deformación de brotes y flores en casos severos</li>
+                                <li>Debilitamiento general de la planta</li>
+                            </ul>
+                        </div>
+                        <div class="disease-treatment">
+                            <h3>Tratamiento</h3>
+                            <ul>
+                                <li>Aplicar fungicidas preventivos al inicio de la temporada</li>
+                                <li>Utilizar fungicidas sistémicos para infecciones establecidas</li>
+                                <li>Eliminar y destruir partes afectadas</li>
+                                <li>Evitar mojar el follaje al regar</li>
+                                <li>Mantener buena circulación de aire entre plantas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Virus del Rayado -->
+                <div class="disease-info-card" data-category="viral">
+                    <div class="disease-header">
+                        <h2>Virus del Rayado (Streak Virus)</h2>
+                        <span class="disease-tag viral">Viral</span>
+                    </div>
+                    <div class="disease-content">
+                        <div class="disease-description">
+                            <h3>Descripción</h3>
+                            <p>El virus del rayado afecta principalmente a cereales y gramíneas, aunque existen variantes que afectan a otras plantas. Se transmite principalmente por insectos vectores y puede causar pérdidas significativas en cultivos.</p>
+                        </div>
+                        <div class="disease-symptoms">
+                            <h3>Síntomas</h3>
+                            <ul>
+                                <li>Rayas o líneas cloróticas (amarillentas) a lo largo de las venas</li>
+                                <li>Patrones de rayado en hojas y tallos</li>
+                                <li>Necrosis (muerte del tejido) a lo largo de las rayas</li>
+                                <li>Crecimiento atrofiado y reducción del rendimiento</li>
+                                <li>En casos severos, muerte prematura de la planta</li>
+                            </ul>
+                        </div>
+                        <div class="disease-treatment">
+                            <h3>Tratamiento</h3>
+                            <ul>
+                                <li>No existe cura para plantas infectadas con virus</li>
+                                <li>Eliminar y destruir plantas infectadas</li>
+                                <li>Controlar insectos vectores como saltahojas y pulgones</li>
+                                <li>Utilizar variedades resistentes cuando estén disponibles</li>
+                                <li>Implementar rotación de cultivos y prácticas culturales adecuadas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>PlantScan</span>
+                </div>
+                <p>Sistema de Detección de Enfermedades en Plantas</p>
+                <p>&copy; 2023 PlantScan. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/info.js') }}"></script>
+</body>
+</html>
