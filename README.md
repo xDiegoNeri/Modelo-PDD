@@ -100,4 +100,4 @@ El sistema puede detectar las siguientes condiciones en plantas:
 
 ## 📝 Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
+Este proyecto ya no está bajo la Licencia MIT :(
